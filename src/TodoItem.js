@@ -1,11 +1,13 @@
 
  import {useContext} from 'react';
  import {TodoItemContext} from './TodoItemContext';
+ import './'
+ 
 
  export default function TodoItem({id, text}){
     const {todos, idNum, setidNum, setTodos} = useContext(TodoItemContext);
 
-    const onButtonClick = e => {
+    const onButtonClick = e => {  //deleting task
         e.preventDefault();
         const newTodo = todos.filter(({id}) => id != e.target.id);
         setTodos(newTodo);

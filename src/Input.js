@@ -19,6 +19,7 @@
 
 import {useContext} from 'react';
 import {TodoItemContext} from './TodoItemContext';
+import './input.css';
 
 export default function Input (){
 const {todoItem, settodoItem, addTodo} = useContext(TodoItemContext);
@@ -26,7 +27,7 @@ const {todoItem, settodoItem, addTodo} = useContext(TodoItemContext);
     return (
         <form onSubmit={addTodo}>
                 <input 
-                placeholder='add your task here' 
+                placeholder='Add your task here' 
                 type ="text"
                 className="input"
                 onChange = { e => settodoItem(e.target.value)}

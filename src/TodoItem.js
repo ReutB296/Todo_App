@@ -1,7 +1,7 @@
 
  import {useContext} from 'react';
  import {TodoItemContext} from './TodoItemContext';
- import './'
+ import './TodoItem.css';
  
 
  export default function TodoItem({id, text}){
@@ -17,13 +17,15 @@
     return (
         <form id={id}>
             <input 
-            type ="text"
-            value ={text}
-            />
-            <input 
+            className= "checkbox"
             type="checkbox"
             />
             <button id={id} onClick ={onButtonClick}>X</button>
+            <input 
+            type ="text"
+            className= "todo"
+            value ={text}
+            />
         </form>
     );
 }
